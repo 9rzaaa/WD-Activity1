@@ -138,23 +138,6 @@ body {
     color: var(--black);
 }
 
-.back-button{
-    display: inline-block;
-    background-color: var(--main-color);
-    color: var(--white);
-    cursor: pointer;
-    font-size: 1.5rem;
-    padding: 0.6rem 1.2rem;
-    text-align: center;
-    width: 150px;
-    height: 40px;
-    border-radius: 8px;
-}
-
-.back-button:hover{
-    background-color: #6c4f28;
-}
-
 .menu .heading{
     text-align: center;
     color: #fff;
