@@ -14,6 +14,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    text-transform: capitalize;
     transition: 0.2s linear;
 }
 
@@ -39,48 +40,46 @@ html::-webkit-scrollbar-thumb{
 
 body {
     background: var(--bg);
-}
-
-.section {
-    padding: 2rem 7%;
+    line-height: 1.6;
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 7%;
     background: var(--bg);
+    border-bottom: var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 7%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .header .logo img {
     height: 5rem;
-    object-fit: contain;
-    margin-left: 0rem;
 }
 
 .header .navbar a {
     color: var(--white);
+    margin: 0 1.5rem;
     font-size: 1.6rem;
-    margin: 0 1rem;
 }
 
 .header .navbar a:hover {
     color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
     padding-bottom: .5rem;
 }
 
 .header .icons div {
-    color: var(--white);
     font-size: 2.5rem;
+    color: var(--white);
     margin-left: 2rem;
     cursor: pointer;
 }
@@ -126,63 +125,70 @@ body {
 }
 
 .btn{
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: inline-block;
-    background-color: var(--main-color);
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
     color: var(--white);
+    background: var(--main-color);
     cursor: pointer;
-    font-size: 2rem;
-    padding: 0.6rem 1.2rem;
-    text-align: center;
-    width: 150px;
-    height: 60px;
-    border-radius: 8px;
 }
 
 .btn:hover{
     color: var(--black);
 }
 
-.home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
+.menu .heading{
     text-align: center;
-    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
 }
 
-.home .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000;
+.menu .heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 7%;
+}
+
+.menu .box-container .box{
+    background: var(--black);
+    border: var(--border);
     text-align: center;
-    padding: 20px 40px;
-    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s;
 }
 
-.home .content h3 {
-    font-size: 5rem;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
-    color: var(--white);
-}
-
-.home .content p {
-    font-size: 2rem;
-    line-height: 1.5;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-    color: var(--white);
-}
-
-.coffee-image {
-    width: 100%;
-    height: 100%;
+.menu .box-container .box img{
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+}
 
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem 0; 
+}
+
+.menu .box-container .box:hover{
+    background: #fff;
+}
+
+.menu .box-container .box:hover > *{
+    color: var(--black);
+}

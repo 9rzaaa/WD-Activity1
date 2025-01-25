@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/demoStyle.css">
+    <title>Get To Know Your Coffee</title>
+</head>
+
+<body>
+<header class="header">
+    <a href="#" class="logo">
+        <img src="./assets/img/coffee-beans_2302566.png" alt="Caffeine Haven Logo">
+    </a>
+    <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/pages/Menu Page/index.html">Menu</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    </div>
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="Search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+</header>
+
+<section id="demo">
+    <div class="container">
+        <h1 class="heading"><span>But First, </span> Coffee </h1>
+
+        <!-- Coffee Order -->
+        <section class="coffee-order">
+            <h2>What's your oder?</h2>
+            <div class="form-group">
+                <label for="coffeeName">Coffee Name:</label>
+                <input type="text" id="coffeeName" placeholder="e.g., Espresso">
+            </div>
+            <div class="form-group">
+                <label for="coffeeSize">Choose Size:</label>
+                <select id="coffeeSize">
+                    <option value="Tall">Tall</option>
+                    <option value="Grande">Grande</option>
+                    <option value="Venti">Venti</option>
+                </select>
+            </div>
+            <button id="submitCoffee">Submit</button>
+            <p id="coffeeOutput"></p>
+        </section>
+
+        <!-- Coffee Trivia -->
+        <section class="coffee-trivia">
+            <h2>Coffee Trivia</h2>
+            <p>Question: Which country is the largest producer of coffee in the world?</p>
+            <div class="form-group">
+                <label for="quizInput">Your answer:</label>
+                <input type="text" id="quizInput" placeholder="e.g., Philippines">
+            </div>
+            <button id="checkNumber">Submit</button>
+            <p id="quizOutput"></p>
+        </section>
+
+        <!-- Coffee Countdown -->
+        <section class="coffee-countdown">
+            <h2>Click start to get your coffee!</h2>
+            <button id="startCountdown">Start</button>
+            <ul id="countdownList"></ul>
+        </section>
+
+        <a href="/index.html" class="back-button">Back to Home</a>
+    </div>
+</section>
+
+<script src="./assets/js/demoScripts.js"></script>
+
+</body>
+</html>
